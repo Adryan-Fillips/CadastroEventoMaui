@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="CadastroEventoMaui.Views.ResumoEventoPage"
+             Title="Resumo do Evento">
+
+    <ScrollView Padding="20">
+        <StackLayout>
+            <Label Text="Resumo do Evento"
+                   FontSize="Large"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Nome do Evento"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.Nome}" />
+
+            <Label Text="Data de Início"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.DataInicio, StringFormat='{0:dd/mm/yyyy}'}" />
+
+            <Label Text="Data de Término"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.DataTermino, StringFormat='{:mm/dd/yyyy}'}" />
+
+            <Label Text="Número de Participantes"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.NumeroParticipantes}" />
+
+            <Label Text="Local do Evento"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.Local}" />
+
+            <Label Text="Custo por Participante"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.CustoPorParticipante, StringFormat='R$ {0:F2}'}" />
+
+            <Label Text="Duração do Evento (em dias)"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.DuracaoEmDias}" />
+
+            <Label Text="Custo Total do Evento"
+                   FontSize="Medium" />
+            <Label Text="{Binding Evento.CustoTotal, StringFormat='R$ {0:F2}'}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+    
